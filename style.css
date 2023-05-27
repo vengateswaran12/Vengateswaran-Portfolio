@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sen,sans-serif;
+    scroll-behavior: smooth;
+    /* scroll-margin-top: 40px; */
+}
+/* VARIABLES */
+:root{
+    /* color */
+    --COLOR: rgb(255, 168, 24);
+    --BL:black;
+    --WH:white;
+    --BL_DULL:rgba(0, 0, 0, 0.9);
+
+    /* --COLOR: rgb(255, 168, 24);
+    --BL:white;
+    --WH:black;
+    --BL_DULL:rgba(255 ,255 ,255, 0.9); */
+}
+body{
+    min-height: 100vh;
+    background-color: var(--BL);
+    color: var(--WH);
+    overflow-x: hidden;
+    position: relative;
+}
+/* HEADER SECTION */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+header nav{
+    width: 100vw;
+    min-height: 6.4vh;
+    background-color: var(--BL);
+    padding: 8px;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.75rem 1.5rem 0.75rem 0.75em;
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color:inherit;
+    font-weight: 400;
+    font-size: 1.2rem;
+    position: relative;
+    letter-spacing: 0.25rem;
+}
+header nav ul li:nth-child(5){
+    margin-right: 5vw;
+}
+header nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -0.438rem;
+    left:0;
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--COLOR);
+    transition: all 0.25s;
+    display: none;
+}
+ header nav ul li a:hover::before, header nav ul li a:focus::before{
+    display: block;
+}
+/* SECTION STYLING*/
+ main section{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid var(--COLOR); */
+}
+main section h3{
+    font-size: 2.3rem;
+    position: relative;
+}
+main section h3::after{
+    content: '';
+    position: absolute;
+    bottom: -0.313rem;
+    left: 0;
+    width: 100%;
+    height: 0.25rem;
+    background-color: var(--COLOR);
+}
+/* HOME PAGE STYLING */
+.home{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: start;
+    padding-left: 6.2rem;
+}
+.name{
+    position: relative;
+}
+.name::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    width: 100%;
+    height: 0.438rem;
+    background-color: var(--COLOR);
+}
+/* ABOUT ME PAGE STYLING */
+.aboutMe article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    min-height: 80%;
+}
+.aboutMe article div{
+    /* border: 1px solid var(--COLOR); */
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+/* SKILLS ICON STYLING */
+.icons{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.25s;
+    list-style: none;
+    gap: 2rem;
+}
+.icons svg{
+    width: 6.25rem;
+    height: 6.25rem;
+    color: var(--WH)
+}
+.icons svg:hover{
+    color: var(--COLOR);
+    transform: scale(1.2);
+}
+.icons li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+/* PROJECT PAGE STYLING */
+.projects article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    gap: 6rem;
+}
+.projectBlock{
+    width: 80%;
+    height: 250px;
+    /* border: 1px solid var(--COLOR);   */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--WH);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 2rem;
+}
+.projectBlock h4{
+    font-size: 20px;
+    color: var(--COLOR);
+}
+.projectBlock p{
+    text-align: justify;
+}
+.projectBlock p a{
+    text-decoration: none;
+    color: var(--WH);
+    position: relative;
+}
+.projectBlock p a::after{
+    content:'';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: var(--COLOR);
+    bottom: -5px;
+    left: 0;
+    transition: all 0.25s;
+}
+.projectBlock p a:hover::after{
+    width: 100%;
+}
+/* CONTACT PAGE STYLING  */
+.contact article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 3rem; */
+    /* border: 1px solid var(--COLOR); */
+    width: 80%;
+    min-height: 80%;
+}
+.contact article form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    gap: 1.5rem;
+    /* border: 1px solid var(--WH); */
+    width: 50%;
+    height: 38.3vh;
+}
+.contact article form label{
+    position: absolute;
+    left: -99999px;
+}
+.contact article form input{
+    width: 80%;
+    height: 1.875rem;
+    font-size: 1.2rem;
+}
+.contact article form button{
+    width: 50%;
+    padding: 0.625rem;
+    background-color: var(--COLOR);
+    border: none;
+    border-radius: 0.313rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.25s;
+}
+.contact article form button:hover{
+    transform: scale(1.2);
+}
+.contact article form textarea{
+    width: 80%;
+    font-size: 1.2rem;
+}
+.contactText{
+    width: 50%;
+    height: 50%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    height: 38vh;
+}
+.contactText p{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+.contactIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.contactIcons svg{
+    color: var(--WH);
+    width: 1.875rem;
+    height: 1.875rem;
+    transition: all 0.25s;
+}
+.contactIcons svg:hover{
+    color: var(--COLOR);
+    transform: scale(1.2);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 6.38vh;
+    font-size: 1.2rem;
+}
+footer a{
+    color: var(--WH);
+    text-decoration: none;
+    transition: all 0.25s;
+}
+footer a:hover{
+    transform: scale(1.2);
+}
+/* hamburgur menu */
+.menu-button{
+    background-color: transparent;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    width: 6.13vw;
+    height: 6.13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+.menu-icon, .menu-icon::before, .menu-icon::after{
+    background-color: var(--WH);
+    width: 5.108vw;
+    height: 0.639vh;
+    border-radius: 0.638vw;
+    position: absolute;
+    transition: all 0.25s;
+}
+.menu-icon::after, .menu-icon::before{
+    content: '';
+}
+.menu-icon::after{
+    transform: translate(-2.55vw, 1.53vw);
+}
+.menu-icon::before{
+    transform: translate(-2.55vw, -1.53vw);
+}
+.menu-button ul{
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style: none;
+    position: absolute;
+    bottom: -80vh;
+    right: -100vw;
+    background-color:var(--BL_DULL);
+    width: 100vw;
+    height: 80vh;
+    padding-right: 3.125rem;
+    transition: all 0.25s;
+}
+.menu-button ul li a{
+    text-decoration: none;
+    color:var(--WH);
+    font-weight: 700;
+    font-size: 2.7rem;
+    letter-spacing: 0.25rem;
+}
+.menu-button ul li a:hover, .menu-button ul li a :focus{
+    color: var(--COLOR);
+}
+/* dark/light mode toggle */
+.slider{
+    width: 30px;
+    height: 60px;
+    background-color: var(--WH);
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.slider div{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--BL);
+    transition: all 0.3s;
+    display: grid;
+    place-content: center;
+} 
+.slider div SVG{
+    width: 15px;
+    height: 15px;
+    color: var(--COLOR);
+}
+/* Responsive */
+@media (width<=992px) {
+    header nav{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+        z-index: 10;
+        background-color: var(--BL_DULL);
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+    main section h3{
+        font-size: 3rem;
+    }
+    .home{
+        align-items: center;
+        font-size: 2.5rem;
+        padding-left: 0.625rem;
+    }
+    .aboutMe article{
+        flex-direction: column;
+        margin-top: 2.5vh;
+    }
+    .aboutMe article div{
+        width: 90%;
+        /* height: 35vh; */
+    }
+     .icons{
+        flex-flow: row wrap;
+        gap: 38.3vw;
+    }
+    .icons svg{
+        width: 8rem;
+        height: 7rem;
+    }
+    .icons p{
+        font-size: 1.5rem;
+    }
+    .project{
+        margin-top: 3.8vh;
+    }
+    .projects article{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .projects article div{
+        width: 80%;
+        height: 60%;  
+    }
+    .contact article{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .contact article form{
+        width: 70vw;
+        min-height: 40vh;
+        gap: 1rem;
+    }
+    .contact article form input{
+        width: 80%;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+    .contactText{
+        width: 70vw;
+        margin-top: 6.4vh;
+    }
+    .contactIcons{
+        width: 100%;
+        height: 20%;
+    }
+    .contactIcons svg{
+        width: 2rem;
+        height: 2rem;
+    }
+    .contact article form button{
+        font-size: 1.5rem;
+    }
+    .contact article form textarea{
+        font-size: 1.5rem;
+    }
+    .contactText p{
+        font-size: 1.5rem;
+    }
+}
+@media (width<=576px){
+    .home{
+        align-items: center;
+        font-size: 1.5rem;
+        padding-left: 0.625rem;
+    }
+    main section h3{
+        font-size: 1.3rem;
+    }
+    .aboutMe article{
+        width: 90%;
+    }
+    /* .aboutMe div{
+        width:300px;
+    } */
+    .icons{
+        flex-direction: row;
+        gap: 4rem;
+    }
+    .icons svg{
+        width: 3rem;
+        height: 3rem;
+    }
+    .icons p{
+        font-size: 0.8rem;
+    }
+    .contactIcons svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .contact article form button{
+        font-size: 0.8rem;
+    }
+    .contact article form textarea{
+        font-size: 0.8rem;
+    }
+    .contact article form input{
+        width: 80%;
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .contact article form{
+        padding-top: 1rem;
+    }
+    .contactText p{
+        font-size: 1rem;
+    }
+    footer{
+        font-size: 0.8rem;
+    }
+}
