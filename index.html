@@ -12,42 +12,42 @@
     <script type="module" src="./main.js"></script>
 </head>
 <body>
+    <article class="slider" title="Dark/Light mode Toggle">
+        <div><i class="fa-solid fa-moon"></i></div>
+    </article>
     <header>
         <nav>
             <ul>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#about">ABOUT ME</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#about" class="menu-aboutMe">ABOUT ME</a></li>
+                <li><a href="#skills" class="menu-skills">SKILLS</a></li>
+                <li><a href="#projects" class="menu-project">PROJECTS</a></li>
+                <li><a href="#contact" class="menu-contact">CONTACT</a></li>
             </ul>
         </nav>
         <button class="menu-button"><div class="menu-icon"></div>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#about">ABOUT ME</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#" >HOME</a></li>
+                <li><a href="#about" class="menu-aboutMe">ABOUT ME</a></li>
+                <li><a href="#skills" class="menu-skills">SKILLS</a></li>
+                <li><a href="#projects" class="menu-project">PROJECTS</a></li>
+                <li><a href="#contact" class="menu-contact">CONTACT</a></li>
             </ul>
         </button>
     </header>
     <main>
-        <section id="home" class="home">
+     <section id="home" class="home">
             <h1 class="name">VENGATESWARAN</h1>
             <h2>FRONT-END</h2>
             <h2>WEB DEVELOPER</h2>
-            <article class="slider" title="Dark/Light mode Toggle">
-                <div><i class="fa-solid fa-moon"></i></div>
-            </article>
         </section>
         <section id="about" class="aboutMe">
             <h3>ABOUT ME</h3>
             <article>
                 <!-- <div>
                     <img src="" alt="photo">
-                </div> -->
-                <div>
+                </div>  -->
+                <div class="card1">
                     <p style="text-indent: 30px;">
                         I'm Vengateswaran, a passionate front-end web developer with a strong desire to create engaging and user-friendly web experiences. As a fresher in the field, I bring a fresh perspective, an eagerness to learn and a driveto make a meaningful impact in the world of web development, With a solid foundation in HTML, CSS and javascript I craft visually appealing and responsive designs.
                     </p>
@@ -65,7 +65,7 @@
         </section>
         <section id='skills' >
             <h3>SKILLS</h3>
-            <article class="icons">
+            <article class="icons card2">
                 <li>
                     <i class="fa-brands fa-html5" ></i>
                     <p>HTML</p>
@@ -86,7 +86,7 @@
         </section>
         <section id="projects" class="projects">
             <h3>PROJECTS</h3>
-            <article>
+            <article class="card3">
                 <div class="projectBlock">
                     <h4>Weather App</h4> 
                     <p>It is a simple weather app showing current weather status of the city name entered by the user, this app is built using HTML, CSS, React and Open_Weather_Map API.</p>
@@ -101,7 +101,7 @@
         </section>
         <section id="contact" class="contact">
             <h3>CONTACT ME</h3>
-            <article>
+            <article class="card4">
                 <form method="POST" action="mailto:venky12081995@gmail.com" target="_blank">
                     <label for="yourName"> YOUR NAME</label>
                     <input type="text" placeholder="YOUR NAME" id="yourName" name="yourName" required tabindex="0">

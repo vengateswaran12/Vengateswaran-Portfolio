@@ -13,24 +13,24 @@ menuButton.addEventListener("click",()=>{
             background-color: transparent;
         }
         .menu-icon::after{
-            transform: translateX(-2.55vw) rotate(-45deg);
+            transform: translateX(-20px) rotate(-45deg);
         }
         .menu-icon::before{
-            transform: translateX(-2.55vw) rotate(45deg);
+            transform: translateX(-20px) rotate(45deg);
         }`
     }
     else{
-        menuBar.style.right='-100vw';
+        menuBar.style.right='-110vw';
         menuStatus=false;
         hamBurger.innerHTML=`
         .menu-icon{
             background-color: block;
         }
         .menu-icon::after{
-            transform: translate(-2.55vw, 1.53vw);
+            transform: translate(-24px, 15px);
         }
         .menu-icon::before{
-            transform: translate(-2.55vw, -1.53vw);
+            transform: translate(-24px, -15px);
         }`
     }
     document.head.appendChild(hamBurger);
@@ -94,9 +94,40 @@ function displayRandomCharacters(){
     return(randomWord);
 }
 
-// scroll animation
- 
-  
-  
+//animation
+
+  const aboutMe=document.querySelector('.menu-aboutMe');
+  const skills=document.querySelector(".menu-skills");
+  const project=document.querySelector('.menu-project');
+  const contact=document.querySelector(".menu-contact");
+  const card1=document.querySelector('.card1')
+  const card2=document.querySelector('.card2')
+  const card3=document.querySelector('.card3')
+  const card4=document.querySelector('.card4')
+  aboutMe.addEventListener('click',()=>{
+        card1.classList.add('showBottom')
+        card2.classList.remove('showBottom')
+        card3.classList.remove('showBottom')
+        card4.classList.remove('showBottom')
+  })
+  skills.addEventListener('click',()=>{
+    card2.classList.add('showBottom')
+    card1.classList.remove('showBottom')
+    card3.classList.remove('showBottom')
+    card4.classList.remove('showBottom')
+  })
+  project.addEventListener('click',()=>{
+    card3.classList.add('showBottom')
+    card1.classList.remove('showBottom')
+    card2.classList.remove('showBottom')
+    card4.classList.remove('showBottom')
+  })
+  contact.addEventListener('click',()=>{
+    card4.classList.add('showBottom')
+    card1.classList.remove('showBottom')
+    card2.classList.remove('showBottom')
+    card3.classList.remove('showBottom')
+  })
+
   
   
