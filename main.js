@@ -1,4 +1,4 @@
-// hamBurger & menuBar
+            // hamBurger & menuBar
 
 const menuButton=document.querySelector('.menu-button');
 const menuBar=document.querySelector('.menu-button ul');
@@ -36,7 +36,7 @@ menuButton.addEventListener("click",()=>{
     document.head.appendChild(hamBurger);
 })
 
-// lite and dark mode slider
+            // lite and dark mode slider
 
 const slider=document.querySelector(".slider");
 const slideButton=document.querySelector(".slider div")
@@ -63,7 +63,7 @@ slider.addEventListener("click",()=>{
     }
 })
 
-// name animation
+            // name animation
 
 const myName=document.querySelector('.home h1'); 
 const word=myName.textContent;
@@ -94,40 +94,69 @@ function displayRandomCharacters(){
     return(randomWord);
 }
 
-//animation
+            //animation
 
-  const aboutMe=document.querySelector('.menu-aboutMe');
-  const skills=document.querySelector(".menu-skills");
-  const project=document.querySelector('.menu-project');
-  const contact=document.querySelector(".menu-contact");
-  const card1=document.querySelector('.card1')
-  const card2=document.querySelector('.card2')
-  const card3=document.querySelector('.card3')
-  const card4=document.querySelector('.card4')
-  aboutMe.addEventListener('click',()=>{
-        card1.classList.add('showBottom')
-        card2.classList.remove('showBottom')
-        card3.classList.remove('showBottom')
-        card4.classList.remove('showBottom')
-  })
-  skills.addEventListener('click',()=>{
+const aboutMe1=document.querySelector('.menu-aboutMe1');
+const skills1=document.querySelector(".menu-skills1");
+const project1=document.querySelector('.menu-project1');
+const contact1=document.querySelector(".menu-contact1");
+const aboutMe2=document.querySelector('.menu-aboutMe2');
+const skills2=document.querySelector(".menu-skills2");
+const project2=document.querySelector('.menu-project2');
+const contact2=document.querySelector(".menu-contact2");
+const card1=document.querySelector('.card1')
+const card2=document.querySelector('.card2')
+const card3=document.querySelector('.card3')
+const card4=document.querySelector('.card4')
+aboutMe1.addEventListener('click',()=>{
+    card1.classList.add('showBottom')
+    card2.classList.remove('showBottom')
+    card3.classList.remove('showBottom')
+    card4.classList.remove('showBottom')
+})
+skills1.addEventListener('click',()=>{
     card2.classList.add('showBottom')
     card1.classList.remove('showBottom')
     card3.classList.remove('showBottom')
     card4.classList.remove('showBottom')
-  })
-  project.addEventListener('click',()=>{
+})
+project1.addEventListener('click',()=>{
     card3.classList.add('showBottom')
     card1.classList.remove('showBottom')
     card2.classList.remove('showBottom')
     card4.classList.remove('showBottom')
-  })
-  contact.addEventListener('click',()=>{
+})
+contact1.addEventListener('click',()=>{
     card4.classList.add('showBottom')
     card1.classList.remove('showBottom')
     card2.classList.remove('showBottom')
     card3.classList.remove('showBottom')
-  })
+})
+aboutMe2.addEventListener('click',()=>{
+    card1.classList.add('showRight')
+    card2.classList.remove('showRight')
+    card3.classList.remove('showRight')
+    card4.classList.remove('showRight')
+})
+skills2.addEventListener('click',()=>{
+    card2.classList.add('showRight')
+    card1.classList.remove('showRight')
+    card3.classList.remove('showRight')
+    card4.classList.remove('showRight')
+})
+project2.addEventListener('click',()=>{
+    card3.classList.add('showRight')
+    card1.classList.remove('showRight')
+    card2.classList.remove('showRight')
+    card4.classList.remove('showRight')
+})
+contact2.addEventListener('click',()=>{
+    card4.classList.add('showRight')
+    card1.classList.remove('showRight')
+    card2.classList.remove('showRight')
+    card3.classList.remove('showRight')
+})
+
 
   
   

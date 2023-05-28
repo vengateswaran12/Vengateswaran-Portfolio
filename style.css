@@ -7,9 +7,13 @@
     font-family: sen,sans-serif;
     scroll-behavior: smooth;
 }
-/* VARIABLES */
+
+            /* VARIABLES */
+
 :root{
+
     /* color */
+
     --COLOR: rgb(255, 168, 24);
     --BL:black;
     --WH:white;
@@ -22,7 +26,7 @@ body{
     overflow-x: hidden;
     position: relative;
 }
-/* HEADER SECTION */
+            /* HEADER SECTION */
 header{
     position: sticky;
     top: 0;
@@ -70,7 +74,7 @@ header nav ul li a::before{
  header nav ul li a:hover::before, header nav ul li a:focus::before{
     display: block;
 }
-/* SECTION STYLING*/
+            /* SECTION STYLING*/
  main section{
     min-height: 100vh;
     width: 100vw;
@@ -78,7 +82,6 @@ header nav ul li a::before{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 1px solid var(--COLOR); */
 }
 main section h3{
     font-size: 2.3rem;
@@ -93,7 +96,7 @@ main section h3::after{
     height: 4px;
     background-color: var(--COLOR);
 }
-/* HOME PAGE STYLING */
+            /* HOME PAGE STYLING */
 .home{
     display: flex;
     flex-direction: column;
@@ -116,7 +119,7 @@ main section h3::after{
     height: 7px;
     background-color: var(--COLOR);
 }
-/* ABOUT ME PAGE STYLING */
+            /* ABOUT ME PAGE STYLING */
 .aboutMe article{
     display: flex;
     flex-direction: row;
@@ -136,7 +139,7 @@ main section h3::after{
     gap: 1rem;
 }
 
-/* SKILLS ICON STYLING */
+            /* SKILLS ICON STYLING */
 .icons{
     width: 80%;
     display: flex;
@@ -163,7 +166,7 @@ main section h3::after{
     align-items: center;
     gap: 1rem;
 }
-/* PROJECT PAGE STYLING */
+            /* PROJECT PAGE STYLING */
 .projects article{
     display: flex;
     flex-direction: row;
@@ -209,7 +212,7 @@ main section h3::after{
 .projectBlock p a:hover::after{
     width: 100%;
 }
-/* CONTACT PAGE STYLING  */
+            /* CONTACT PAGE STYLING  */
 .contact article{
     display: flex;
     flex-direction: row;
@@ -302,7 +305,7 @@ footer a{
 footer a:hover{
     transform: scale(1.2);
 }
-/* hamburgur menu */
+            /* hamburger menu */
 .menu-button{
     background-color: transparent;
     border: none;
@@ -359,7 +362,7 @@ footer a:hover{
 .menu-button ul li a:hover, .menu-button ul li a :focus{
     color: var(--COLOR);
 }
-/* dark/light mode toggle */
+            /* dark/light mode toggle */
 .slider{
     width: 30px;
     height: 60px;
@@ -390,7 +393,7 @@ footer a:hover{
     color: var(--COLOR);
 }
 
-/* animation */
+            /* animation */
 
 .card1,.card2,.card3,.card4{
     transition: aniamtion 1s;
@@ -412,81 +415,27 @@ footer a:hover{
         transform: translateY(0);
         opacity:1;
     }
+}.showRight{
+    animation-name: animate1;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+    opacity: 1;
 }
-/* Responsive */
-/* @media (width<=576px){
-    header nav{
-        display: none;
+@keyframes animate1{
+    0%{
+        transform: translateX(300px);
+        opacity: 0;
     }
-    header{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    100%{
+        transform: translateX(0);
+        opacity:1;
     }
-    header .menu-button{
-        display: flex;
-    }
-    .home{
-        font-size: 1.5rem;
-        align-items: center;
-        padding-left: 0px;
-    }
-    .aboutMe article div{
-        width: 100%;
-    }
-    .icons{
-        gap: 5rem;
-    }
-    .icons svg{
-        width: 80px;
-        height: 80px;
-    }
-    .projects article{
-        flex-direction: column;
-        width: 80%;
-        gap: 2rem;
-    }
-    .projectBlock{
-        width: 90%;
-        height: 220px;
-        gap: 1.5rem;
-    }
-    .contact article{
-        flex-direction: column-reverse;
-        width: 80%;
-        min-height: 80%;
-    }
-    .contact article form{
-        gap: 1rem;
-        width: 90%;
-    }
-    .contact article form input{
-        width: 100%;
-        height: 30px;
-        font-size: 1rem;
-    }
-    .contact article form button{
-        background-color: var(--COLOR);
-        font-size: 1.1rem;
-    }
-    .contact article form textarea{
-        width: 100%;
-        height: 80px;
-        font-size: 1rem;
-    }
-    .contactText{
-        gap: 1rem;
-        width: 90%;
-        font-size: 1rem;
-    }
-    .contactText p{
-        font-size: 1rem;
-    }
-    .contactIcons svg{
-        width: 25px;
-        height: 25px;
-    }
-} */
+}
+
+            /* Responsive */
+
 @media (width<=992px){
     header nav{
         display: none;
