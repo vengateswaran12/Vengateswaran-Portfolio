@@ -5,6 +5,7 @@ const menuBar=document.querySelector('.menu-button ul');
 const hamBurger=document.createElement('style')
 let menuStatus=false;
 menuButton.addEventListener("click",()=>{
+    menuBar.style.display='flex';
     if(!menuStatus){
         menuBar.style.right='0';
         menuStatus=true;
@@ -32,6 +33,7 @@ menuButton.addEventListener("click",()=>{
         .menu-icon::before{
             transform: translate(-24px, -15px);
         }`
+        menuBar.style.display='none';
     }
     document.head.appendChild(hamBurger);
 })
