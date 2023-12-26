@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sen,sans-serif;
+    scroll-behavior: smooth;
+}
+
+            /* VARIABLES */
+
+:root{
+
+    /* color */
+
+    --COLOR: rgb(255, 168, 24);
+    --BL:black;
+    --WH:white;
+    --BL_DULL:rgba(0, 0, 0, 0.9);
+}
+body{
+    min-height: 100vh;
+    background-color: var(--BL);
+    color: var(--WH);
+    overflow-x: hidden;
+    position: relative;
+}
+            /* HEADER SECTION */
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+header nav{
+    width: 100vw;
+    min-height: 50px;
+    background-color: var(--BL);
+    padding: 8px;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+    padding: 12px 24px 12px 12px;
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color:inherit;
+    font-weight: 400;
+    font-size: 1.2rem;
+    position: relative;
+    letter-spacing: 0.25rem;
+}
+header nav ul li:nth-child(5){
+    margin-right: 40px;
+}
+header nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left:0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--COLOR);
+    transition: all 0.25s;
+    display: none;
+}
+ header nav ul li a:hover::before, header nav ul li a:focus::before{
+    display: block;
+}
+            /* SECTION STYLING*/
+ main section{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main section h3{
+    font-size: 2.3rem;
+    position: relative;
+}
+main section h3::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--COLOR);
+}
+            /* HOME PAGE STYLING */
+.home{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: start;
+    padding-left: 100px;
+}
+.name{
+    position: relative;
+}
+.name::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    width: 100%;
+    height: 7px;
+    background-color: var(--COLOR);
+}
+            /* ABOUT ME PAGE STYLING */
+.aboutMe article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    min-height: 80%;
+}
+.aboutMe article div{
+    width: 60%;
+    min-height: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    text-align: justify;
+    gap: 1rem;
+}
+
+            /* SKILLS ICON STYLING */
+.icons{
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.25s;
+    list-style: none;
+    gap: 10rem;
+}
+.icons svg{
+    width: 100px;
+    height: 100px;
+    color: var(--WH)
+}
+.icons svg:hover{
+    color: var(--COLOR);
+    transform: scale(1.2);
+}
+.icons li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+            /* PROJECT PAGE STYLING */
+.projects article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    gap: 6rem;
+}
+.projectBlock{
+    width: 80%;
+    height: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--WH);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 2rem;
+}
+.projectBlock h4{
+    font-size: 20px;
+    color: var(--COLOR);
+}
+.projectBlock p{
+    text-align: justify;
+}
+.projectBlock p a{
+    text-decoration: none;
+    color: var(--WH);
+    position: relative;
+}
+.projectBlock p a::after{
+    content:'';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: var(--COLOR);
+    bottom: -5px;
+    left: 0;
+    transition: all 0.25s;
+}
+.projectBlock p a:hover::after{
+    width: 100%;
+}
+            /* CONTACT PAGE STYLING  */
+.contact article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    min-height: 80%;
+}
+.contact article form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    gap: 1.5rem;
+    width: 50%;
+    min-height: 300px;
+}
+.contact article form label{
+    position: absolute;
+    left: -99999px;
+}
+.contact article form input{
+    width: 80%;
+    height: 30px;
+    font-size: 1.2rem;
+}
+.contact article form button{
+    width: 50%;
+    padding: 10px;
+    background-color: var(--COLOR);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.25s;
+}
+.contact article form button:hover{
+    transform: scale(1.2);
+}
+.contact article form textarea{
+    width: 80%;
+    font-size: 1.2rem;
+}
+.contactText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    min-height: 300px;
+}
+.contactText p{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+.contactIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.contactIcons svg{
+    color: var(--WH);
+    width: 30px;
+    height: 30px;
+    transition: all 0.25s;
+}
+.contactIcons svg:hover{
+    color: var(--COLOR);
+    transform: scale(1.2);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+footer a{
+    color: var(--WH);
+    text-decoration: none;
+    transition: all 0.25s;
+}
+footer a:hover{
+    transform: scale(1.2);
+}
+            /* hamburger menu */
+.menu-button{
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.menu-icon, .menu-icon::before, .menu-icon::after{
+    background-color: var(--WH);
+    width: 48px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.25s;
+}
+.menu-icon::after, .menu-icon::before{
+    content: '';
+}
+.menu-icon::after{
+    transform: translate(-24px, 15px);
+}
+.menu-icon::before{
+    transform: translate(-24px, -15px);
+}
+.menu-button ul{
+    display: none;
+    flex-flow: column;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style: none;
+    position: absolute;
+    bottom: -80vh;
+    right: -110vw;
+    background-color:var(--BL_DULL);
+    width: 100vw;
+    height: 80vh;
+    padding-right: 50px;
+    transition: all 0.25s;
+}
+.menu-button ul li a{
+    text-decoration: none;
+    color:var(--WH);
+    font-weight: 700;
+    font-size: 2.7rem;
+    letter-spacing: 0.25rem;
+}
+.menu-button ul li a:hover, .menu-button ul li a :focus{
+    color: var(--COLOR);
+}
+            /* dark/light mode toggle */
+.slider{
+    width: 30px;
+    height: 60px;
+    background-color: var(--WH);
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 99;
+}
+.slider div{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--BL);
+    transition: all 0.3s;
+    display: grid;
+    place-content: center;
+} 
+.slider div SVG{
+    width: 15px;
+    height: 15px;
+    color: var(--COLOR);
+}
+
+            /* animation */
+
+.card1,.card2,.card3,.card4{
+    transition: aniamtion 1s;
+}
+.showBottom{
+    animation-name: animate2;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+    opacity: 1;
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity:1;
+    }
+}.showRight{
+    animation-name: animate1;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-out;
+    transform: translateX(0);
+    opacity: 1;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+
+            /* Responsive */
+
+@media (width<=992px){
+    body{
+        width:100vw;
+        overflow-x: hidden;
+    }
+    header nav{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    header .menu-button{
+        display: flex;
+    }
+    .home{
+        font-size: 1.5rem;
+        align-items: center;
+        padding-left: 0px;
+    }
+    .aboutMe article div{
+        width: 100%;
+    }
+    .icons{
+        gap: 5rem;
+    }
+    .icons svg{
+        width: 80px;
+        height: 80px;
+    }
+    .projects article{
+        flex-direction: column;
+        width: 80%;
+        gap: 2rem;
+    }
+    .projectBlock{
+        width: 90%;
+        height: 240px;
+        gap: 1.5rem;
+    }
+    .contact article{
+        flex-direction: column-reverse;
+        width: 80%;
+        min-height: 80%;
+    }
+    .contact article form{
+        gap: 1rem;
+        width: 90%;
+    }
+    .contact article form input{
+        width: 100%;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .contact article form button{
+        background-color: var(--COLOR);
+        font-size: 1.1rem;
+    }
+    .contact article form textarea{
+        width: 100%;
+        height: 80px;
+        font-size: 1rem;
+    }
+    .contactText{
+        gap: 1rem;
+        width: 90%;
+        font-size: 1rem;
+    }
+    .contactText p{
+        font-size: 1rem;
+    }
+    .contactIcons svg{
+        width: 25px;
+        height: 25px;
+    }
+}

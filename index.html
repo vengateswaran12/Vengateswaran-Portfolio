@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vengateswaran">
+    <meta name="discription" content="Portfolio-Vengateswaran Frontend Web Developer">
+    <title>Vengateswaran</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7dae92a1b7.js" crossorigin="anonymous"></script>
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+
+                <!-- Dark/light toggle menu -->
+
+    <article class="slider" title="Dark/Light mode Toggle">
+        <div><i class="fa-solid fa-moon"></i></div>
+    </article>
+
+                <!-- header with navigation options -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about" class="menu-aboutMe1">ABOUT ME</a></li>
+                <li><a href="#skills" class="menu-skills1">SKILLS</a></li>
+                <li><a href="#projects" class="menu-project1">PROJECTS</a></li>
+                <li><a href="#contact" class="menu-contact1">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="menu-button"><div class="menu-icon"></div>
+            <ul>
+                <li><a href="#" >HOME</a></li>
+                <li><a href="#about" class="menu-aboutMe2">ABOUT ME</a></li>
+                <li><a href="#skills" class="menu-skills2">SKILLS</a></li>
+                <li><a href="#projects" class="menu-project2">PROJECTS</a></li>
+                <li><a href="#contact" class="menu-contact2">CONTACT</a></li>
+            </ul>
+        </button>
+    </header>
+
+    <main>
+
+                <!-- home page content -->
+
+        <section id="home" class="home">
+            <h1 class="name">VENGATESWARAN</h1>
+            <h2>FULL STACK</h2>
+            <h2>WEB DEVELOPER</h2>
+        </section>
+
+                <!-- about me page content -->
+
+        <section id="about" class="aboutMe">
+            <h3>ABOUT ME</h3>
+            <article>
+                <!-- <div>
+                    <img src="" alt="photo">
+                </div>  -->
+                <div class="card1">
+                    <p style="text-indent: 30px;">
+                        I'm Vengateswaran, a passionate full stack web developer with a strong desire to create engaging and user-friendly web experiences. As a fresher in the field, I bring a fresh perspective, an eagerness to learn, and a drive to make a meaningful impact in the world of web development. With a solid foundation in frontend(HTML, CSS, Javascript), backend(Java, SpringBoot) and DataBase(MySQL) I craft visually appealing, responsive designs and RESTful Webservice APIs.
+                    </p>
+                    <p style="text-indent: 30px;">
+                        In addition to my technical skills, I am a creative problem solver and have a passion for user experience design. I strive to understand the needs and preferences of end-users, ensuring that the website I create not only looks great but also provides intuitive and seamless interactions.
+                    </p>
+                    <p style="text-indent: 30px;">
+                        I am thrilled about the opportunity to contribute my skills and enthusiasm to your team. I look forward to collaborating on exciting projects, growing as a professional, and making a positive impact on the digital landscape.
+                    </p>
+                    <p style="text-indent: 30px;">
+                        Thank you for taking the time to get to know me better. Let's create something amazing together!
+                    </p>
+                </div>
+            </article>
+        </section>
+
+                <!-- skills page content -->
+
+        <section id='skills' >
+            <h3>SKILLS</h3>
+            <article class="icons card2">
+                <li>
+                    <i class="fa-brands fa-html5" ></i>
+                    <p>HTML</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p>CSS</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-js"></i>
+                    <p>JAVA SCRIPT</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-react"></i>
+                    <p>REACT</p>
+                </li>
+                <li>
+                    <i class="fa-brands fa-java"></i>
+                    <p>JAVA</p>
+                </li>
+                <li>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <p>JSP/SERVLET</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-leaf"></i>
+                    <p>SPRING BOOT</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-database"></i>
+                    <p>MySQL</p>
+                </li>
+            </article>
+        </section>
+
+                <!-- projects page content -->
+
+        <section id="projects" class="projects">
+            <h3>PROJECTS</h3>
+            <article class="card3">
+                <div class="projectBlock">
+                    <h4>Weather App</h4> 
+                    <p>
+                        It is a simple weather app showing the current weather status of the city name entered by the user. This app is built using HTML, CSS, React, and the Open_Weather_Map API.
+                    </p>
+                    <p><a href="https://vengateswaran12.github.io/Weather_App/" target="_blank"> GO TO APP</a></p>
+                </div>
+                <div class="projectBlock">
+                    <h4>Todo List App</h4>
+                    <p>
+                        It is a to-do list app through which users can add or delete daily tasks from the to-do list app, it also has a search task feature. This app is built using HTML, CSS, React, and the Web Storage API.
+                    </p>
+                    <p><a href="https://vengateswaran12.github.io/Todo-list/" target="_blank"> GO TO APP</a></p>
+                </div>
+            </article>
+        </section>
+
+                <!-- contact page content -->
+
+        <section id="contact" class="contact">
+            <h3>CONTACT ME</h3>
+            <article class="card4">
+                <form method="POST" action="mailto:venky12081995@gmail.com" target="_blank">
+                    <label for="Name"> YOUR NAME</label>
+                    <input type="text" placeholder="YOUR NAME" id="Name" name="Name" required tabindex="0">
+                    <label for="Email"> YOUR EMAIL ID</label>
+                    <input type="email" placeholder="YOUR EMAIL" id="Email" name="Email" required tabindex="0">
+                    <label for="comments"> TEXT AREA</label>
+                    <textarea name="comments" id="comments" cols="50" rows="6" placeholder="COMMENTS" required tabindex="0"></textarea>
+                    <button type="submit" name="submit">SEND EMAIL</button>
+                </form>
+                <div class="contactText">
+                    <p style="text-indent: 30px;">
+                        I'm thrilled to connect with you for any inquiries, collaboration possibilities, or exciting projects. Feel free to reach out to me using the contact details below.
+                    </p>
+                    <p style="text-indent: 30px;">
+                        I'm eager to discuss how we can collaborate and create remarkable web experiences. Thank you for considering me, and I look forward to hearing from you soon!
+                    </p>
+                    <div class="contactIcons">
+                        <a href="https://github.com/vengateswaran12"
+                        target="_blank"
+                        title="Go to Vengateswaran's Github">
+                        <i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/vengateswaran-r-1999141b3/"
+                        target="_blank"
+                        title="Go to Vengateswaran's LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i></a>
+                        <a href="http://api.whatsapp.com/send/?phone=917502795439"
+                        target="_blank"
+                        title="Go to Vengateswaran's Whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="./Vengateswaran Resume.pdf"
+                        target="_blank"
+                        title="Go to Vengateswaran's Resume">
+                        <i class="fa-solid fa-download" title="Download Resume"></i></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+                <!-- footer -->
+
+    <footer>
+        <a href="#" class="back_to_top">BACK TO TOP</a>
+        <p>DESIGNED BY VENGATESWARAN 2023</p>
+    </footer>
+</body>
+</html>
